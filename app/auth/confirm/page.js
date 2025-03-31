@@ -3,6 +3,8 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
+export const dynamic = "force-dynamic";
+
 export default function ConfirmEmail() {
 
   const BASE_API_URL = process.env.NEXT_PUBLIC_API_BASE_URL    
