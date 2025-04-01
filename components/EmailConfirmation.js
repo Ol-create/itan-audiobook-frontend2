@@ -1,5 +1,3 @@
-"use client"; // Ensure this is a Client Component
-
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
