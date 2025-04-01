@@ -1,9 +1,7 @@
 "use client"; // Ensure this is a Client Component
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
-
-export const dynamic = "force-dynamic";
+import { useEffect, Suspense, useState } from "react";
 
 export default function ConfirmEmail() {
 
@@ -45,8 +43,10 @@ export default function ConfirmEmail() {
   }, [confirmation_token, email, router]);
 
   return (
+    <Suspense fallback={<h1>Loading...</h1>}>
     <div>
       <h1>{status}</h1>
     </div>
+    </Suspense>
   );
 }
